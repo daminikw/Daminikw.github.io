@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Damini Wadekar · Data Science Portfolio</title>
+<meta name="description" content="Damini Wadekar: Master of Data Science graduate (RMIT) in Melbourne. Interactive portfolio with projects, skills, experience and cover letter.">
+<meta property="og:title" content="Damini Wadekar · Data Science Portfolio">
+<meta property="og:description" content="Damini Wadekar: Master of Data Science graduate (RMIT) in Melbourne. Interactive portfolio with projects, skills, experience and cover letter.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230F3C65'/%3E%3Ctext x='32' y='44' font-size='34' font-family='Georgia,serif' font-style='italic' font-weight='700' fill='%23FFF2BA' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Open Sans',system-ui,sans-serif;background:#FFF2BA}
+a{color:#0F3C65}a:hover{color:#4B2E21}
+.float{animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.pcard{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.spot .dot{animation:pulse 1.8s ease-in-out infinite;transition:transform .2s}
+.spot:hover .dot{transform:scale(1.18)}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,185,49,.75)}50%{box-shadow:0 0 0 9px rgba(232,185,49,0)}}
+@media (prefers-reduced-motion: reduce){.float,.spot .dot{animation:none}.pcard{transition:none}}
+button:focus-visible,a:focus-visible{outline:3px solid #E8B931;outline-offset:3px}
+</style>
+<style>
+html,body{margin:0;background:#FFF2BA}
+#dc-root{width:1440px;margin:0 auto}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-tpl">
+
+<div id="top" style="width: 1440px; box-sizing: border-box; background: #FFF2BA; color: #4B2E21; font-family: 'Open Sans', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+
+<header style="display: flex; align-items: center; justify-content: space-between; height: 96px; padding: 0 80px; box-sizing: border-box; flex-shrink: 0">
+<a href="#top" style="font-size: 18px; font-weight: 800; letter-spacing: 0.16em; color: #0F3C65; text-decoration: none">DAMINI WADEKAR</a>
+<nav aria-label="Main" style="display: flex; gap: 40px; align-items: center; font-size: 14px; font-weight: 700; letter-spacing: 0.14em">
+<a href="#about" style="text-decoration: none">ABOUT</a>
+<a href="projects.html" style="text-decoration: none">PROJECTS</a>
+<a href="skills.html" style="text-decoration: none">SKILLS</a>
+<a href="experience.html" style="text-decoration: none">EXPERIENCE</a>
+<a href="cover-letter.html" style="text-decoration: none">COVER LETTER</a>
+<a href="https://www.linkedin.com/in/damini-wadekar" style="display: flex; align-items: center; gap: 10px; min-height: 46px; box-sizing: border-box; padding: 0 22px; border-radius: 999px; background: #0F3C65; color: #FFF2BA; text-decoration: none">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+LINKEDIN</a>
+</nav>
+</header>
+
+<section aria-label="Introduction" style="position: relative; height: 760px; flex-shrink: 0; overflow: hidden">
+<h1 style="position: absolute; left: 0; right: 0; top: 34px; margin: 0; text-align: center; white-space: nowrap; font-family: 'Playfair Display', Georgia, serif; font-size: 150px; line-height: 1; font-weight: 900; letter-spacing: -0.01em; color: #0F3C65">DATA SCIENCE</h1>
+
+<div style="position: absolute; left: 490px; top: 196px; width: 460px; height: 500px">
+
+<div class="pcard" style="position: absolute; left: 60px; top: 60px; width: 340px; box-sizing: border-box; padding: 14px 14px 0; background: #FFFDF5; border: 2px solid #0F3C65; border-radius: 10px; box-shadow: 8px 8px 0 #0F3C65; z-index: {{cA.z}}; transform: {{cA.tf}}">
+<img src="img/analyst.jpg" alt="Illustrated Damini at her desk, pointing at a bar chart on her laptop, with database and chart icons around her" style="display: block; width: 308px; height: 308px; object-fit: cover; border-radius: 4px">
+<div style="height: 56px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-style: italic; font-weight: 700; color: #0F3C65">The Analyst</div>
+<sc-if value="{{cA.front}}" hint-placeholder-val="{{true}}">
+<button class="spot" onClick="{{sp.a0.pick}}" aria-label="Laptop dashboard" aria-pressed="{{sp.a0.pressed}}" style="position: absolute; left: 226px; top: 139px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.a0.bg}}; color: {{sp.a0.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+<button class="spot" onClick="{{sp.a1.pick}}" aria-label="Pie chart" aria-pressed="{{sp.a1.pressed}}" style="position: absolute; left: 204px; top: 29px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.a1.bg}}; color: {{sp.a1.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+<button class="spot" onClick="{{sp.a2.pick}}" aria-label="Database" aria-pressed="{{sp.a2.pressed}}" style="position: absolute; left: 26px; top: 98px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.a2.bg}}; color: {{sp.a2.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+</sc-if>
+<sc-if value="{{cA.back}}" hint-placeholder-val="{{false}}">
+<button onClick="{{cA.pick}}" aria-label="Show The Analyst" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer"></button>
+</sc-if>
+</div>
+
+<div class="pcard" style="position: absolute; left: 60px; top: 60px; width: 340px; box-sizing: border-box; padding: 14px 14px 0; background: #FFFDF5; border: 2px solid #0F3C65; border-radius: 10px; box-shadow: 8px 8px 0 #0F3C65; z-index: {{cF.z}}; transform: {{cF.tf}}">
+<img src="img/foodie.jpg" alt="Illustrated Damini in a cream jumper, holding chopsticks over a steaming bowl of ramen, surrounded by sushi and vegetables" style="display: block; width: 308px; height: 308px; object-fit: cover; border-radius: 4px">
+<div style="height: 56px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-style: italic; font-weight: 700; color: #0F3C65">The Foodie</div>
+<sc-if value="{{cF.front}}" hint-placeholder-val="{{false}}">
+<button class="spot" onClick="{{sp.f0.pick}}" aria-label="Ramen bowl" aria-pressed="{{sp.f0.pressed}}" style="position: absolute; left: 148px; top: 198px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.f0.bg}}; color: {{sp.f0.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+<button class="spot" onClick="{{sp.f1.pick}}" aria-label="Sushi" aria-pressed="{{sp.f1.pressed}}" style="position: absolute; left: 39px; top: 192px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.f1.bg}}; color: {{sp.f1.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+<button class="spot" onClick="{{sp.f2.pick}}" aria-label="Noodle bowl" aria-pressed="{{sp.f2.pressed}}" style="position: absolute; left: 254px; top: 39px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.f2.bg}}; color: {{sp.f2.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+</sc-if>
+<sc-if value="{{cF.back}}" hint-placeholder-val="{{true}}">
+<button onClick="{{cF.pick}}" aria-label="Show The Foodie" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer"></button>
+</sc-if>
+</div>
+
+<div class="pcard" style="position: absolute; left: 60px; top: 60px; width: 340px; box-sizing: border-box; padding: 14px 14px 0; background: #FFFDF5; border: 2px solid #0F3C65; border-radius: 10px; box-shadow: 8px 8px 0 #0F3C65; z-index: {{cD.z}}; transform: {{cD.tf}}">
+<img src="img/designer.jpg" alt="Illustrated Damini in a sage blazer and green glasses, holding a paint palette and sketchbook, surrounded by brushes and paint splashes" style="display: block; width: 308px; height: 308px; object-fit: cover; border-radius: 4px">
+<div style="height: 56px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-style: italic; font-weight: 700; color: #0F3C65">The Designer</div>
+<sc-if value="{{cD.front}}" hint-placeholder-val="{{false}}">
+<button class="spot" onClick="{{sp.d0.pick}}" aria-label="Paint palette" aria-pressed="{{sp.d0.pressed}}" style="position: absolute; left: 260px; top: 198px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.d0.bg}}; color: {{sp.d0.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+<button class="spot" onClick="{{sp.d1.pick}}" aria-label="Sketchbook" aria-pressed="{{sp.d1.pressed}}" style="position: absolute; left: 185px; top: 223px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.d1.bg}}; color: {{sp.d1.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+<button class="spot" onClick="{{sp.d2.pick}}" aria-label="Paintbrush" aria-pressed="{{sp.d2.pressed}}" style="position: absolute; left: 26px; top: 39px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.d2.bg}}; color: {{sp.d2.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+</sc-if>
+<sc-if value="{{cD.back}}" hint-placeholder-val="{{true}}">
+<button onClick="{{cD.pick}}" aria-label="Show The Designer" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer"></button>
+</sc-if>
+</div>
+
+<div class="pcard" style="position: absolute; left: 60px; top: 60px; width: 340px; box-sizing: border-box; padding: 14px 14px 0; background: #FFFDF5; border: 2px solid #0F3C65; border-radius: 10px; box-shadow: 8px 8px 0 #0F3C65; z-index: {{cS.z}}; transform: {{cS.tf}}">
+<img src="img/social.jpg" alt="Illustrated Damini in a green wrap dress, waving hello, with hearts and the words waving and friends around her" style="display: block; width: 308px; height: 308px; object-fit: cover; border-radius: 4px">
+<div style="height: 56px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-style: italic; font-weight: 700; color: #0F3C65">The Social Butterfly</div>
+<sc-if value="{{cS.front}}" hint-placeholder-val="{{false}}">
+<button class="spot" onClick="{{sp.s0.pick}}" aria-label="Waving hand" aria-pressed="{{sp.s0.pressed}}" style="position: absolute; left: 54px; top: 136px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.s0.bg}}; color: {{sp.s0.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+<button class="spot" onClick="{{sp.s1.pick}}" aria-label="Crowd" aria-pressed="{{sp.s1.pressed}}" style="position: absolute; left: 266px; top: 262px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.s1.bg}}; color: {{sp.s1.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+<button class="spot" onClick="{{sp.s2.pick}}" aria-label="Hearts" aria-pressed="{{sp.s2.pressed}}" style="position: absolute; left: 267px; top: 29px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span class="dot" style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0F3C65; background: {{sp.s2.bg}}; color: {{sp.s2.fg}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span></button>
+</sc-if>
+<sc-if value="{{cS.back}}" hint-placeholder-val="{{true}}">
+<button onClick="{{cS.pick}}" aria-label="Show The Social Butterfly" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer"></button>
+</sc-if>
+</div>
+</div>
+
+<div style="position: absolute; left: 520px; top: 694px; width: 400px; display: flex; align-items: center; justify-content: center; gap: 16px">
+<button onClick="{{prev}}" aria-label="Previous side of me" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; border: 2px solid #0F3C65; background: #FFFDF5; color: #0F3C65; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round"><path d="M15 18l-6-6 6-6"></path></svg></button>
+<div style="min-width: 150px; text-align: center; font-size: 14px; font-weight: 800; letter-spacing: 0.14em; color: #4B2E21">{{counter}}</div>
+<button onClick="{{next}}" aria-label="Next side of me" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; border: 2px solid #0F3C65; background: #0F3C65; color: #FFF2BA; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round"><path d="M9 18l6-6-6-6"></path></svg></button>
+</div>
+
+<div style="position: absolute; z-index: 20; right: 96px; top: 136px; transform: rotate(-6deg); pointer-events: none; font-family: 'Playfair Display', Georgia, serif; font-size: 104px; font-style: italic; font-weight: 800; color: #4B2E21; text-shadow: 4px 4px 0 #FFF2BA, -4px -4px 0 #FFF2BA, 4px -4px 0 #FFF2BA, -4px 4px 0 #FFF2BA">Graduate</div>
+
+<div style="position: absolute; left: 80px; top: 232px; width: 360px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 32px; line-height: 1.25; font-style: italic; font-weight: 700; color: #0F3C65">Turning messy data into stories people can act on.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4B2E21">Master of Data Science, RMIT University · Melbourne, VIC</p>
+</div>
+
+<div style="position: absolute; left: 80px; top: 420px; width: 360px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 0.16em; color: #4B2E21">MEET THE MANY SIDES OF ME</div>
+<div role="group" aria-label="Choose a side of me" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<button onClick="{{pA.pick}}" aria-pressed="{{pA.pressed}}" style="min-height: 46px; padding: 0 16px; border-radius: 999px; border: 2px solid #0F3C65; background: {{pA.bg}}; color: {{pA.fg}}; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer">Analyst</button>
+<button onClick="{{pF.pick}}" aria-pressed="{{pF.pressed}}" style="min-height: 46px; padding: 0 16px; border-radius: 999px; border: 2px solid #0F3C65; background: {{pF.bg}}; color: {{pF.fg}}; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer">Foodie</button>
+<button onClick="{{pD.pick}}" aria-pressed="{{pD.pressed}}" style="min-height: 46px; padding: 0 16px; border-radius: 999px; border: 2px solid #0F3C65; background: {{pD.bg}}; color: {{pD.fg}}; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer">Designer</button>
+<button onClick="{{pS.pick}}" aria-pressed="{{pS.pressed}}" style="min-height: 46px; padding: 0 16px; border-radius: 999px; border: 2px solid #0F3C65; background: {{pS.bg}}; color: {{pS.fg}}; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer">Social butterfly</button>
+</div>
+<button onClick="{{toggleAuto}}" style="align-self: flex-start; display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 4px; border: 0; background: transparent; color: #4B2E21; font-family: inherit; font-size: 14px; font-weight: 700; text-decoration: underline; cursor: pointer">{{autoLabel}}</button>
+</div>
+
+<div style="position: absolute; right: 80px; top: 320px; width: 330px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; padding: 20px 24px; border-radius: 24px; background: #FFFDF5; border: 2px solid #0F3C65; box-shadow: 6px 6px 0 #0F3C65" aria-live="polite">
+<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; color: #4B2E21"><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: #E8B931; color: #0F3C65"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 8.4L23 12l-8.4 2.6L12 23l-2.6-8.4L1 12l8.4-2.6z"></path></svg></span>{{bubbleTag}}</div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; line-height: 1.4; font-style: italic; font-weight: 600; color: #0F3C65">“{{bubble}}”</div>
+</div>
+
+<div style="position: absolute; right: 80px; top: 590px; width: 330px; display: flex; flex-direction: column; align-items: flex-end; gap: 16px">
+<div style="display: flex; align-items: center; gap: 10px; padding: 9px 16px; border-radius: 999px; background: #4B2E21; color: #FFF2BA; font-size: 14px; font-weight: 700">
+<span style="width: 9px; height: 9px; border-radius: 50%; background: #9FD69B"></span>Open to entry-level data &amp; analytics roles</div>
+<div style="display: flex; gap: 12px">
+<a href="https://www.linkedin.com/in/damini-wadekar" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: #0F3C65; color: #FFF2BA">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+<a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Daminiwadekar19@gmail.com" target="_blank" rel="noopener" aria-label="Email Damini" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: #0F3C65; color: #FFF2BA">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg></a>
+</div>
+</div>
+</section>
+
+<section id="about" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center; padding: 96px 80px; box-sizing: border-box; background: #0F3C65; color: #FFF2BA; flex-shrink: 0">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<div style="font-size: 14px; font-weight: 800; letter-spacing: 0.18em; color: #F2E6B3">WHO AM I</div>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 88px; line-height: 1; font-weight: 900; color: #FFF2BA">Hi, I’m <em style="font-style: italic; font-weight: 800; color: #E8B931">Damini</em></h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #F2E6B3">I’m a Melbourne-based data science graduate who loves turning raw, messy data into clear stories. I’ve designed SQL schemas and machine-learning models, deployed an app across three AWS architectures, forecast Australian housing approvals in R, and led the frontend of an AI presentation-coaching tool with an industry partner.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.65; color: #F2E6B3">Outside the data, I’m a people person with a designer’s eye. I’m happiest meeting someone new, trying a new dish, or getting stuck into a hard problem.</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding-top: 8px">
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Playfair Display', Georgia, serif; font-size: 56px; line-height: 1; font-weight: 900; color: #FFF2BA">2</div><div style="font-size: 13px; font-weight: 800; letter-spacing: 0.12em; color: #F2E6B3">DEGREES IN DATA &amp; IT</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Playfair Display', Georgia, serif; font-size: 56px; line-height: 1; font-weight: 900; color: #FFF2BA">4</div><div style="font-size: 13px; font-weight: 800; letter-spacing: 0.12em; color: #F2E6B3">END-TO-END PROJECTS</div></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-family: 'Playfair Display', Georgia, serif; font-size: 56px; line-height: 1; font-weight: 900; color: #FFF2BA">1</div><div style="font-size: 13px; font-weight: 800; letter-spacing: 0.12em; color: #F2E6B3">INDUSTRY CAPSTONE</div></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 28px; border-radius: 18px; background: #FFF2BA; color: #0F3C65; font-size: 15px; font-weight: 800; letter-spacing: 0.12em">
+<span>PYTHON</span><span>R</span><span>SQL</span><span>POWER BI</span><span>TABLEAU</span><span>AWS</span>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 24px; padding: 40px; border-radius: 32px; background: #FFF2BA; color: #4B2E21; box-shadow: 10px 10px 0 #E8B931">
+<h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 48px; line-height: 1; font-weight: 900; color: #0F3C65">QUALIFICATIONS</h3>
+<div style="display: flex; gap: 18px; align-items: flex-start">
+<div style="flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #0F3C65; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-size: 19px; font-weight: 800; color: #0F3C65">Master of Data Science</div><div style="font-size: 16px; line-height: 1.5">RMIT University, Melbourne · Completed June 2026</div></div>
+</div>
+<div style="display: flex; gap: 18px; align-items: flex-start">
+<div style="flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #0F3C65; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-size: 19px; font-weight: 800; color: #0F3C65">B.Sc IT, Data Management &amp; Visual Insights</div><div style="font-size: 16px; line-height: 1.5">Gujarat University, India · 2021–2024</div></div>
+</div>
+<div style="height: 2px; background: #4B2E21; opacity: 0.2"></div>
+<div style="display: flex; gap: 18px; align-items: flex-start">
+<div style="flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #4B2E21; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><circle cx="12" cy="8" r="6"></circle><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="font-size: 19px; font-weight: 800; color: #0F3C65">Certifications</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="padding: 7px 14px; border-radius: 999px; border: 2px solid #0F3C65; font-size: 14px; font-weight: 700; color: #0F3C65">SQL Mastery Course</span>
+<span style="padding: 7px 14px; border-radius: 999px; border: 2px solid #0F3C65; font-size: 14px; font-weight: 700; color: #0F3C65">Tableau for Data Visualization</span>
+<span style="padding: 7px 14px; border-radius: 999px; border: 2px solid #0F3C65; font-size: 14px; font-weight: 700; color: #0F3C65">Complete Data Science &amp; ChatGPT with Python</span>
+</div></div>
+</div>
+<div style="display: flex; gap: 18px; align-items: flex-start">
+<div style="flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #4B2E21; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><div style="font-size: 19px; font-weight: 800; color: #0F3C65">Volunteering</div><div style="font-size: 16px; line-height: 1.5">Kirrip Program Volunteer · RMIT Orientation Volunteer</div></div>
+</div>
+</div>
+</section>
+
+<section id="more" style="display: flex; flex-direction: column; gap: 48px; padding: 104px 80px 104px; box-sizing: border-box; background: #F2E6B3; flex-grow: 1">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 14px; font-weight: 800; letter-spacing: 0.18em; color: #4B2E21">A LITTLE MORE ABOUT ME</div>
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 92px; line-height: 1; font-weight: 900; color: #0F3C65">BEYOND THE <em style="font-style: italic; font-weight: 800; color: #4B2E21">spreadsheets</em></h2>
+</div>
+<p style="margin: 0 0 10px; max-width: 300px; font-size: 18px; line-height: 1.6; color: #4B2E21">Things you won’t find on my résumé. Tap a card to flip it.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px">
+
+<button onClick="{{c0.toggle}}" aria-pressed="{{c0.pressed}}" style="height: 236px; box-sizing: border-box; padding: 28px; border-radius: 28px; border: 2px solid #0F3C65; background: {{c0.bg}}; color: {{c0.fg}}; box-shadow: 7px 7px 0 #0F3C65; font-family: inherit; text-align: left; cursor: pointer; display: flex; flex-direction: column">
+<sc-if value="{{c0.closed}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #0F3C65; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div><span style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 800; color: #0F3C65">01</span></div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; color: #0F3C65">Fast learner</div>
+<div style="font-size: 14px; font-weight: 700; color: #4B2E21">Tap to flip →</div>
+</div>
+</sc-if>
+<sc-if value="{{c0.open}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="font-size: 18px; line-height: 1.55; font-weight: 500">New tool, new stack, new dataset: I pick things up quickly. In my capstone I led the frontend in Next.js while working alongside an AI model.</div>
+<div style="font-size: 14px; font-weight: 700">Tap to flip back</div>
+</div>
+</sc-if>
+</button>
+
+<button onClick="{{c1.toggle}}" aria-pressed="{{c1.pressed}}" style="height: 236px; box-sizing: border-box; padding: 28px; border-radius: 28px; border: 2px solid #0F3C65; background: {{c1.bg}}; color: {{c1.fg}}; box-shadow: 7px 7px 0 #0F3C65; font-family: inherit; text-align: left; cursor: pointer; display: flex; flex-direction: column">
+<sc-if value="{{c1.closed}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #4B2E21; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M4 21V4"></path><path d="M4 4h12l-2 4 2 4H4"></path></svg></div><span style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 800; color: #0F3C65">02</span></div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; color: #0F3C65">Loves a challenge</div>
+<div style="font-size: 14px; font-weight: 700; color: #4B2E21">Tap to flip →</div>
+</div>
+</sc-if>
+<sc-if value="{{c1.open}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="font-size: 18px; line-height: 1.55; font-weight: 500">Hard problems are my favourite kind. Like the self-join bug that kept timing out my Olist queries, until I tracked it down.</div>
+<div style="font-size: 14px; font-weight: 700">Tap to flip back</div>
+</div>
+</sc-if>
+</button>
+
+<button onClick="{{c2.toggle}}" aria-pressed="{{c2.pressed}}" style="height: 236px; box-sizing: border-box; padding: 28px; border-radius: 28px; border: 2px solid #0F3C65; background: {{c2.bg}}; color: {{c2.fg}}; box-shadow: 7px 7px 0 #0F3C65; font-family: inherit; text-align: left; cursor: pointer; display: flex; flex-direction: column">
+<sc-if value="{{c2.closed}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #0F3C65; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><circle cx="9" cy="8" r="4"></circle><path d="M2 21c0-4 3-6 7-6s7 2 7 6"></path><path d="M16 4a4 4 0 0 1 0 8"></path><path d="M22 21c0-3-2-5-5-5.5"></path></svg></div><span style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 800; color: #0F3C65">03</span></div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; color: #0F3C65">Proud extrovert</div>
+<div style="font-size: 14px; font-weight: 700; color: #4B2E21">Tap to flip →</div>
+</div>
+</sc-if>
+<sc-if value="{{c2.open}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="font-size: 18px; line-height: 1.55; font-weight: 500">I love meeting new people, whether it’s Costco members, crowds at the Australian Open or new students at RMIT orientation.</div>
+<div style="font-size: 14px; font-weight: 700">Tap to flip back</div>
+</div>
+</sc-if>
+</button>
+
+<button onClick="{{c3.toggle}}" aria-pressed="{{c3.pressed}}" style="height: 236px; box-sizing: border-box; padding: 28px; border-radius: 28px; border: 2px solid #0F3C65; background: {{c3.bg}}; color: {{c3.fg}}; box-shadow: 7px 7px 0 #0F3C65; font-family: inherit; text-align: left; cursor: pointer; display: flex; flex-direction: column">
+<sc-if value="{{c3.closed}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #4B2E21; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M3 12h18a9 9 0 0 1-18 0z"></path><path d="M8 8c0-2 2-2 2-4"></path><path d="M13 8c0-2 2-2 2-4"></path></svg></div><span style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 800; color: #0F3C65">04</span></div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; color: #0F3C65">Foodie &amp; home cook</div>
+<div style="font-size: 14px; font-weight: 700; color: #4B2E21">Tap to flip →</div>
+</div>
+</sc-if>
+<sc-if value="{{c3.open}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="font-size: 18px; line-height: 1.55; font-weight: 500">Always keen to try a new dish, and even keener to cook my own. My favourites: Indian, Greek, Italian and Mexican.</div>
+<div style="font-size: 14px; font-weight: 700">Tap to flip back</div>
+</div>
+</sc-if>
+</button>
+
+<button onClick="{{c4.toggle}}" aria-pressed="{{c4.pressed}}" style="height: 236px; box-sizing: border-box; padding: 28px; border-radius: 28px; border: 2px solid #0F3C65; background: {{c4.bg}}; color: {{c4.fg}}; box-shadow: 7px 7px 0 #0F3C65; font-family: inherit; text-align: left; cursor: pointer; display: flex; flex-direction: column">
+<sc-if value="{{c4.closed}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #0F3C65; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg></div><span style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 800; color: #0F3C65">05</span></div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; color: #0F3C65">Designer at heart</div>
+<div style="font-size: 14px; font-weight: 700; color: #4B2E21">Tap to flip →</div>
+</div>
+</sc-if>
+<sc-if value="{{c4.open}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="font-size: 18px; line-height: 1.55; font-weight: 500">My Bachelor’s was in Visual Insights for a reason. I care how a dashboard feels to use, not just what it says.</div>
+<div style="font-size: 14px; font-weight: 700">Tap to flip back</div>
+</div>
+</sc-if>
+</button>
+
+<button onClick="{{c5.toggle}}" aria-pressed="{{c5.pressed}}" style="height: 236px; box-sizing: border-box; padding: 28px; border-radius: 28px; border: 2px solid #0F3C65; background: {{c5.bg}}; color: {{c5.fg}}; box-shadow: 7px 7px 0 #0F3C65; font-family: inherit; text-align: left; cursor: pointer; display: flex; flex-direction: column">
+<sc-if value="{{c5.closed}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: #4B2E21; color: #FFF2BA"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" style="stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div><span style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 800; color: #0F3C65">06</span></div>
+<div style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 800; color: #0F3C65">Happy shopper</div>
+<div style="font-size: 14px; font-weight: 700; color: #4B2E21">Tap to flip →</div>
+</div>
+</sc-if>
+<sc-if value="{{c5.open}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%">
+<div style="font-size: 18px; line-height: 1.55; font-weight: 500">Shopping counts as market research, right? Working in retail showed me how shoppers really make decisions.</div>
+<div style="font-size: 14px; font-weight: 700">Tap to flip back</div>
+</div>
+</sc-if>
+</button>
+
+</div>
+</section>
+
+<footer style="display: flex; flex-direction: column; gap: 40px; padding: 80px 80px 40px; box-sizing: border-box; background: #4B2E21; color: #FFF2BA; flex-shrink: 0">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 32px">
+<h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 76px; line-height: 1.02; font-weight: 900; color: #FFF2BA">Let’s make something<br><em style="font-style: italic; font-weight: 800; color: #E8B931">together.</em></h2>
+<div style="display: flex; gap: 14px">
+<a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Daminiwadekar19@gmail.com" target="_blank" rel="noopener" style="display: flex; align-items: center; white-space: nowrap; min-height: 56px; box-sizing: border-box; padding: 0 30px; border-radius: 999px; background: #FFF2BA; color: #4B2E21; font-size: 16px; font-weight: 800; letter-spacing: 0.08em; text-decoration: none">EMAIL ME →</a>
+<button onClick="{{copyEmail}}" aria-live="polite" style="display: flex; align-items: center; white-space: nowrap; min-height: 56px; box-sizing: border-box; padding: 0 24px; border-radius: 999px; border: 2px dashed #FFF2BA; background: transparent; color: #FFF2BA; font-family: inherit; font-size: 15px; font-weight: 800; letter-spacing: 0.04em; cursor: pointer">{{copyLabel}}</button>
+<a href="https://www.linkedin.com/in/damini-wadekar" style="display: flex; align-items: center; white-space: nowrap; min-height: 56px; box-sizing: border-box; padding: 0 30px; border-radius: 999px; border: 2px solid #FFF2BA; color: #FFF2BA; font-size: 16px; font-weight: 800; letter-spacing: 0.08em; text-decoration: none">CONNECT ON LINKEDIN</a>
+</div>
+</div>
+<div style="height: 1px; background: #FFF2BA; opacity: 0.25"></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; color: #F2E6B3">
+<span>© 2026 Damini Wadekar · Melbourne, VIC</span>
+<span>Daminiwadekar19@gmail.com</span>
+</div>
+</footer>
+
+</div>
+</template>
+<script type="application/json" id="dc-props">{"startMode":{"editor":"enum","options":["Analyst","Foodie","Designer","Social"],"default":"Analyst","section":"Hero"},"autoplay":{"editor":"boolean","default":true,"section":"Hero"},"$preview":{"width":1440,"height":3320}}</script>
+<script src="dc-lite.js"></script>
+<script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      const s = this.state || {};
+      const p = this.props || {};
+      if (s.auto === false || p.autoplay === false) return;
+      try { if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch (e) {}
+      this.setState({ idx: (this.curIdx() + 1) % 4, spot: null });
+    }, 5000);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+  curIdx() {
+    const s = this.state || {};
+    const p = this.props || {};
+    const order = ['Analyst', 'Foodie', 'Designer', 'Social'];
+    if (typeof s.idx === 'number') return s.idx;
+    const i = order.indexOf(p.startMode ?? 'Analyst');
+    return i < 0 ? 0 : i;
+  }
+  renderVals() {
+    const s = this.state || {};
+    const p = this.props || {};
+    const idx = this.curIdx();
+    const names = ['The Analyst', 'The Foodie', 'The Designer', 'The Social Butterfly'];
+    const lines = [
+      'Right now: turning messy data into clear, useful stories.',
+      'Show me a dish I haven’t tried, then I’ll go home and cook it.',
+      'I care how a dashboard looks, not just what it says.',
+      'Proud extrovert. Come say hi, I love meeting new people!'
+    ];
+    const spots = {
+      a0: [0, 'Power BI dashboards: I built one showing cohort retention, RFM segments and risk scores across 99,441 Olist orders.'],
+      a1: [0, 'Forecasting: a SARIMA + GARCH model in R, built on 513 months of ABS dwelling-approvals data.'],
+      a2: [0, 'SQL is my home base: schemas, window functions and cohort queries in SQLite, MySQL and PostgreSQL.'],
+      f0: [1, 'New dish, new flavour, maybe a new favourite. I’m always up for trying something different.'],
+      f1: [1, 'Trying new cuisines is one of my favourite things to do.'],
+      f2: [1, 'My kitchen travels the world: Indian, Greek, Italian and Mexican are my favourites to cook. Ask me for a recipe!'],
+      d0: [2, 'My Bachelor’s was in Data Management & Visual Insights. Design is how data gets understood.'],
+      d1: [2, 'I sketch before I build. This portfolio started as a moodboard of references.'],
+      d2: [2, 'Colour, layout and type: small design choices make data easier to read.'],
+      s0: [3, 'Waving hello: I genuinely love meeting new people.'],
+      s1: [3, 'Event staff at the Australian Open and Australian Grand Prix, keeping big crowds moving with a smile.'],
+      s2: [3, 'Volunteering with RMIT’s Kirrip Program and Orientation, helping new students feel at home.']
+    };
+    const go = (i) => this.setState({ idx: ((i % 4) + 4) % 4, auto: false, spot: null });
+    const slots = [
+      { tf: 'translate(0px, 10px) rotate(-1deg) scale(1.12)', z: 4 },
+      { tf: 'translate(112px, -18px) rotate(10deg) scale(0.92)', z: 3 },
+      { tf: 'translate(0px, -52px) rotate(3deg) scale(0.86)', z: 1 },
+      { tf: 'translate(-112px, -18px) rotate(-11deg) scale(0.92)', z: 2 }
+    ];
+    const card = (i) => {
+      const slot = (i - idx + 4) % 4;
+      return { tf: slots[slot].tf, z: slots[slot].z, front: slot === 0, back: slot !== 0, pick: () => go(i) };
+    };
+    const pill = (i) => {
+      const on = idx === i;
+      return { bg: on ? '#0F3C65' : 'transparent', fg: on ? '#FFF2BA' : '#0F3C65', pressed: on ? 'true' : 'false', pick: () => go(i) };
+    };
+    const activeSpot = s.spot && spots[s.spot] && spots[s.spot][0] === idx ? s.spot : null;
+    const sp = {};
+    Object.keys(spots).forEach((k) => {
+      const on = activeSpot === k;
+      sp[k] = {
+        bg: on ? '#0F3C65' : '#E8B931',
+        fg: on ? '#FFF2BA' : '#0F3C65',
+        pressed: on ? 'true' : 'false',
+        pick: () => this.setState({ spot: k, auto: false })
+      };
+    });
+    const autoOn = s.auto !== false && p.autoplay !== false;
+    return {
+      copyEmail: () => { const ok = () => this.setState({ copied: 'yes' }); const no = () => this.setState({ copied: 'no' }); try { navigator.clipboard.writeText('Daminiwadekar19@gmail.com').then(ok, no); } catch (e) { no(); } },
+      copyLabel: s.copied === 'yes' ? 'Copied!' : s.copied === 'no' ? 'Daminiwadekar19@gmail.com' : 'Copy my email',
+      cA: card(0), cF: card(1), cD: card(2), cS: card(3),
+      pA: pill(0), pF: pill(1), pD: pill(2), pS: pill(3),
+      sp: sp,
+      prev: () => go(idx - 1),
+      next: () => go(idx + 1),
+      counter: '0' + (idx + 1) + ' / 04 · ' + names[idx].replace('The ', '').toUpperCase(),
+      bubble: activeSpot ? spots[activeSpot][1] : lines[idx],
+      bubbleTag: activeSpot ? 'YOU FOUND ONE' : 'TAP THE SPARKLES ON MY PICTURE',
+      autoLabel: autoOn ? 'Pause the slideshow' : 'Play the slideshow',
+      toggleAuto: () => this.setState({ auto: !autoOn }),
+      c0: this.cardFlip(0), c1: this.cardFlip(1), c2: this.cardFlip(2), c3: this.cardFlip(3), c4: this.cardFlip(4), c5: this.cardFlip(5)
+    };
+  }
+  cardFlip(i) {
+    const s = this.state || {};
+    const open = s.open || {};
+    const backs = ['#0F3C65', '#4B2E21', '#0F3C65', '#4B2E21', '#0F3C65', '#4B2E21'];
+    const isOpen = !!open[i];
+    return {
+      open: isOpen,
+      closed: !isOpen,
+      pressed: isOpen ? 'true' : 'false',
+      bg: isOpen ? backs[i] : '#FFF2BA',
+      fg: isOpen ? '#FFF2BA' : '#0F3C65',
+      toggle: () => {
+        const cur = (this.state && this.state.open) || {};
+        this.setState({ open: Object.assign({}, cur, { [i]: !cur[i] }) });
+      }
+    };
+  }
+}
+DCBoot(Component);
+</script>
+<noscript><p style="font-family:sans-serif;padding:40px">This portfolio needs JavaScript turned on. You can reach Damini at Daminiwadekar19@gmail.com or linkedin.com/in/damini-wadekar.</p></noscript>
+</body>
+</html>
